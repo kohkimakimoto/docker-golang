@@ -1,4 +1,4 @@
-FROM centos:centos7
+FROM centos:centos6
 
 ENV GOVERSION 1.7.2
 
