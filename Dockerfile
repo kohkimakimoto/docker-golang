@@ -1,4 +1,3 @@
-# docker build -t kohkimakimoto/golang:centos7-go1.7.2 .
 FROM centos:centos7
 
 ENV GOVERSION 1.7.2
