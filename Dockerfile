@@ -2,12 +2,15 @@ FROM centos:centos6
 
 ENV GOVERSION 1.7.2
 
+RUN yum -y install epel-release && yum clean all
 RUN yum -y install \
   git \
   curl \
   wget \
   unzip \
-  tar
+  tar \
+  vim-enhanced \
+  sudo
 
 ADD https://storage.googleapis.com/golang/go${GOVERSION}.linux-amd64.tar.gz /tmp/go${GOVERSION}.linux-amd64.tar.gz
 RUN tar -C /usr/local -xzf /tmp/go${GOVERSION}.linux-amd64.tar.gz \
