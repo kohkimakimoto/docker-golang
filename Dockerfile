@@ -1,13 +1,15 @@
-FROM centos:centos7
+FROM debian:8
 
-RUN yum -y install epel-release && yum clean all
-RUN yum -y install \
+ENV DEBIAN_FRONTEND noninteractive
+
+RUN apt-get -y update
+RUN apt-get -y install \
   git \
   curl \
   wget \
   unzip \
   tar \
-  vim-enhanced \
+  vim \
   sudo
 
 ENV GOVERSION 1.7.2
